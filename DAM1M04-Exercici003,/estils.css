@@ -101,11 +101,11 @@ header {
 
 /* VECTOR-TOOLS SECTION */
 .vector-tools h2 {
-  font-size: 50px; /* tamaño del título principal */
+  font-size: 60px; /* tamaño del título principal */
 }
 
 .vector-tools p {
-  font-size: 1rem; /* tamaño de los párrafos debajo del título */
+  font-size: 20px; /* tamaño de los párrafos debajo del título */
 }
 
 .vector-tools {
@@ -132,71 +132,110 @@ header {
 /* Imagen central */
 .vector-tools .vector-image {
   width: 100%;
-  max-width: 500px;             /* ajusta el tamaño máximo de la imagen */
+  max-width: 1280px;           /* ajusta el tamaño máximo de la imagen */
   display: flex;
   justify-content: center;
   margin: 0 auto;
 }
 .vector-tools .vector-image img {
-  width: 80%;                   /* tamaño relativo, puedes cambiar al gusto */
+  width: 115%;                   /* tamaño relativo*/
   height: auto;
   border-radius: 8px;
 }
 
-/* Contenedor de tarjetas: flex para dos + una más grande */
+/* === CONTENEDOR DE TARJETAS === */
 .vector-tools .vector-cards {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: wrap;           /* permite que la tercera baje */
   justify-content: center;
-  gap: 1.5rem;
-  margin-top: 2rem;
-  width: 100%;
+  gap: 24px;                 /* separación entre tarjetas */
+  margin-top: 32px;
+  max-width: 900px;          /* ancho total */
+  margin-left: auto;
+  margin-right: auto;
 }
 
-/* Tarjetas: las dos primeras más pequeñas */
+/* === TARJETAS GENERALES === */
 .vector-tools .vector-cards .card {
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(255,255,255,0.05);     
+  border: 1px solid #000000;
   border-radius: 10px;
-  padding: 1.25rem;
+  padding: 24px;
+  color: #222;
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
-  color: #fff;
-  flex: 1 1 280px;             /* ancho mínimo de tarjeta, ajustable */
-  max-width: 320px;             /* ajustable según lo quieras */
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 12px;
 }
 
-/* Tercera tarjeta un poco más grande */
-.vector-tools .vector-cards .card:nth-child(3) {
-  flex: 1 1 360px;             /* ancho más grande, ajustable */
-  max-width: 400px;
+/* === TARJETAS 1 Y 2 (cuadradas) === */
+.vector-tools .vector-cards .card:nth-child(1),
+.vector-tools .vector-cards .card:nth-child(2) {
+  flex: 1 1 calc(50% - 20px);  /* mitad del ancho */
+  aspect-ratio: 1 / 1;         /* cuadradas */
+  max-width: 430px;
 }
 
-/* Imagen o vídeo dentro de tarjeta */
-.vector-tools .vector-cards .card img,
-.vector-tools .vector-cards .card video {
-  width: 100%;
+/* Imagen de la tarjeta 1 */
+.vector-tools .vector-cards .card:nth-child(1) img {
+width: 100%;          /* ocupa todo el ancho disponible */
+  height: auto;         /* mantiene proporción */
+  object-fit: contain;  /* asegura que se vea completa */
+}
+
+/* Imagen de la tarjeta 2 */
+.vector-tools .vector-cards .card:nth-child(2) img {
+  margin-top: auto;   /* empuja la imagen hacia abajo */
+
+  width: 100px;       /* tamaño controlado */
   height: auto;
-  object-fit: cover;
-  border-radius: 6px;
+  
+}
+/* === TARJETA 3 (horizontal) === */
+.vector-tools .vector-cards .card:nth-child(3) {
+  flex: 1 1 100%;              /* ocupa todo el ancho */
+  max-width: 900px;
+  flex-direction: row;         /* contenido en fila */
+  align-items: center;
+  gap: 24px;
+  text-align: left;
 }
 
-/* Títulos y párrafos de tarjetas */
+/* Imagen o video dentro de la tercera tarjeta */
+.vector-tools .vector-cards .card:nth-child(3) img,
+.vector-tools .vector-cards .card:nth-child(3) video {
+  width: 40%;                  /* imagen ocupa parte del ancho */
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+/* Texto dentro de la tercera tarjeta */
+.vector-tools .vector-cards .card:nth-child(3) .card-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* === TIPOGRAFÍA === */
 .vector-tools .vector-cards .card h3 {
   margin: 0;
-  font-size: 1.1rem;
-  color: #fff;
+  font-size: 26px;
+  color: #ffffff;
+  padding-bottom: 6px;
 }
 .vector-tools .vector-cards .card p {
   margin: 0;
-  font-size: 0.95rem;
-  color: #dcdcdc;
+  font-size: 20px;
+  line-height: 1.5;
+  color: #ffffff;
 }
+
 
 /* Enlaces */
 .vector-tools a {
-  color: #66b2ff;
+  color: #ffffff;
 }
 .vector-tools a:hover {
   color: #a6d4ff;
