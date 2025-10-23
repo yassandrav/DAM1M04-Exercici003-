@@ -1,0 +1,162 @@
+/* -------------------------
+   Variables globales
+------------------------- */
+:root {
+  --max-width: 1264px;
+  --side-padding: 24px;
+  --gutter: 20px;
+  --bg: #f9f9f9;
+  --text: #111827;
+  --muted: #6b7280;
+  --accent: #0a84ff;
+  --card-bg: #ffffff;
+  --glass-bg: rgba(255,255,255,0.62);
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --shadow-soft: 0 12px 36px rgba(16,24,40,0.06);
+  --transition: 180ms cubic-bezier(.2,.8,.2,1);
+}
+
+/* -------------------------
+   Reset y base
+------------------------- */
+* { box-sizing: border-box; }
+html, body { margin:0; padding:0; font-family: Inter, "Helvetica Neue", Arial, sans-serif; background: var(--bg); color: var(--text); line-height:1.5; }
+a { color: var(--accent); text-decoration:none; transition: var(--transition); }
+a:hover { text-decoration: underline; }
+
+/* -------------------------
+   Contenedor centrado
+------------------------- */
+.container {
+  width:100%;
+  max-width: var(--max-width);
+  margin:0 auto;
+  padding: 0 var(--side-padding);
+}
+
+/* -------------------------
+   Header sticky y frosted glass
+------------------------- */
+header {
+  display:flex;
+  flex-direction:column;
+  width:100%;
+  z-index: 60;
+}
+
+.header-top {
+  padding: 12px 0;
+}
+
+.header-bottom {
+  position: sticky;
+  top:0;
+  z-index:70;
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px) saturate(110%);
+  padding: 10px 0;
+  border-bottom:1px solid rgba(16,24,40,0.06);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.03);
+}
+
+.header-bottom-inner, .header-top-inner {
+  display:flex;
+  justify-content: space-between;
+  align-items:center;
+  height:52px;
+}
+
+/* -------------------------
+   Hero section
+------------------------- */
+.hero {
+  display:flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 60px 0;
+}
+
+.hero img {
+  max-width: 100%;
+  height:auto;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+}
+
+/* -------------------------
+   Secciones generales
+------------------------- */
+.section {
+  display:flex;
+  flex-direction:column;
+  gap: var(--gutter);
+  padding:40px 0;
+}
+
+/* -------------------------
+   Bloques con flex row wrap
+------------------------- */
+.features-inner, .photo-grid, .vector-tools, .ml-grid, .effects-row, .reviews-grid {
+  display:flex;
+  flex-wrap: wrap;
+  gap: var(--gutter);
+}
+
+.feature-card, .photo-card, .ml-card {
+  flex:1 1 320px;
+  background: var(--card-bg);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-soft);
+  padding: 18px;
+}
+
+/* -------------------------
+   Imagenes
+------------------------- */
+.hero img, .photo-card img, .feature-card img, video {
+  max-width:100%;
+  height:auto;
+  display:block;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-soft);
+}
+
+/* -------------------------
+   Botones
+------------------------- */
+.btn, .btn-comprar {
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:10px 18px;
+  border-radius:12px;
+  background: var(--accent);
+  color:#fff;
+  cursor:pointer;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+.btn:hover { transform: translateY(-2px); box-shadow: 0 12px 30px rgba(10,132,255,0.12); }
+
+/* -------------------------
+   Footer
+------------------------- */
+.footer {
+  background:#0f1724;
+  color:#e6eef8;
+  padding:40px 0;
+}
+.footer .footer-links {
+  display:flex;
+  flex-wrap:wrap;
+  gap:28px;
+}
+.footer-column {
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+  min-width:180px;
+}
+.footer a { color: inherit; opacity:0.95; }
+.footer a:hover { color: var(--accent); text-decoration: underline; opacity:1; }
+                                                                                                                                                                                                                                                                                                     
