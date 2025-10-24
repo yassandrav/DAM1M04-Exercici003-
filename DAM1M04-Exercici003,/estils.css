@@ -267,95 +267,105 @@ width: 100%;          /* ocupa todo el ancho disponible */
   color: #a6d4ff;
 }
 
+
 /* FEATURES PHOTO-EDITING SECTION */
 .features.photo-editing {
   padding: 4rem 0;
 }
+
 .features-inner {
   display: flex;
   flex-direction: column;
+  align-items: center; /* Centra todo horizontalmente */
   gap: 3rem;
+  text-align: center; /* Centra el texto */
 }
-.features-inner .media img {
-  width: 100%;
-  height: auto;
-}
+
+.features-inner .media,
 .features-inner .text {
-  flex: 1;
+  width: 100%;
+  display: flex;
+  justify-content: center; /* Centra imágenes horizontalmente */
+  flex-direction: column; /* Mantiene la columna para texto + imagen */
+  align-items: center;
 }
+
+.features-inner img {
+  width: 200%; /* Ajusta el tamaño dentro del contenedor */
+  max-width: 1300px; /* Limita el ancho máximo */
+  height: auto;
+  display: block;
+  margin: 0 auto; /* Centra la imagen */
+}
+
+
 .features-inner .text h2 {
-  font-size: 2rem;
-  font-weight: 600;
+  font-size: 40px;
+  font-weight: 600px;
   margin-bottom: 1rem;
 }
+
 .features-inner .text p {
-  color: #555;
-  margin-bottom: 1.5rem;
+  color: #ffffff;
+  margin-bottom: 30px;
 }
-.features-inner .text img {
-  width: 100%;
-  height: auto;
-}
-@media (min-width: 768px) {
-  .features-inner {
-    flex-direction: row;
-    align-items: center;
-  }
-  .features-inner .media,
-  .features-inner .text {
-    flex: 1;
-  }
-  .features-inner .media {
-    margin-right: 2rem;
-  }
-}
+
+
 
 /* PHOTO-GRID SECTION */
 .photo-edit .container {
   padding: 4rem 0;
 }
+
 .photo-grid {
   display: flex;
-  flex-direction: column;
-  gap: 2rem;
+  flex-wrap: wrap; /* Permite varias filas */
+  gap: 2rem; /* Espacio entre tarjetas */
+  justify-content: space-between; /* Distribuye dos por fila */
 }
-@media (min-width: 768px) {
-  .photo-grid {
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-  .photo-card {
-    flex: 1 1 calc(50% - 1rem);
-  }
-}
+
 .photo-card {
-  background-color: #fff;
+  background-color: #000; /* Fondo negro */
+  color: #fff; /* Texto blanco */
   padding: 2rem;
-  border: 1px solid #eee;
+  border: 1px solid #000000;
   border-radius: 8px;
-  text-align: center;
+  display: flex;
+  flex-direction: column; /* Imagen arriba, texto debajo */
+  align-items: flex-start; /* Imagen alineada a la izquierda */
+  text-align: left; /* Texto justificado */
+  flex: 0 1 calc(50% - 1rem); /* Dos tarjetas por fila */
+  box-sizing: border-box;
 }
+
 .photo-card img {
-  width: 64px;
+  width: 64px; /* Imagen pequeña */
   height: auto;
-  margin-bottom: 1rem;
+  margin-bottom: 1rem; /* Espacio entre imagen y texto */
 }
+
 .photo-card h3 {
   font-size: 1.125rem;
   margin-bottom: 0.75rem;
 }
+
 .photo-card p {
-  color: #555;
+  color: #ccc; /* Texto secundario */
   margin-bottom: 1rem;
 }
+
 .photo-card .link {
-  text-decoration: none;
-  color: #007aff;
-  font-weight: 500;
+  text-decoration: none; /* Sin subrayado */
+  color: #00aaff;        /* Color azul */
+  font-weight: 500;      /* Grosor del texto */
+  background: none;      /* Sin fondo */
+  padding: 0;            /* Sin espacio extra */
 }
 .photo-card .link:hover {
-  text-decoration: underline;
+  text-decoration: underline; /* Subrayado solo al pasar el mouse */
 }
+
+
 
 /* HERO FEATURES SECTION */
 .hero-features {
