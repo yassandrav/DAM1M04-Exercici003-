@@ -354,16 +354,17 @@ width: 100%;          /* ocupa todo el ancho disponible */
   margin-bottom: 1rem;
 }
 
-.photo-card .link {
+.photo-card .link2 {
   text-decoration: none; /* Sin subrayado */
   color: #00aaff;       
   font-weight: 500;      
   background: none;      
   padding: 0;         
 }
-.photo-card .link:hover {
+.photo-card .link2:hover {
   text-decoration: underline; /* Subrayado solo al pasar el mouse */
 }
+
 
 
 /* HERO FEATURES SECTION */
@@ -399,18 +400,24 @@ width: 100%;          /* ocupa todo el ancho disponible */
   width: 100%;
 }
 
-/* Tarjeta grande horizontal */
+/* Contenedor de la primera tarjeta horizontal */
+.feature-card-container-large {
+  display: flex;
+  justify-content: center;  /* centra la tarjeta horizontal */
+  margin-bottom: 20px;
+}
+
+/* Primera tarjeta horizontal */
 .feature-card--large {
   display: flex;
-  flex-direction: row;     /* Texto a la izquierda, imagen a la derecha */
+  flex-direction: row;      /* texto a la izquierda, imagen a la derecha */
   align-items: center;
-  padding: 2rem;
   border: 1px solid #eee;
   border-radius: 8px;
-  gap: 2rem;
+  gap: 20px;
   width: 100%;
-  max-width: 1100px;       /* más ancho para que respire */
-  background: #fff;
+  max-width: 1100px;
+  background: #f0f0f0;
 }
 
 .feature-card--large .text {
@@ -423,28 +430,32 @@ width: 100%;          /* ocupa todo el ancho disponible */
   height: auto;
   flex-shrink: 0;
   border-radius: 8px;
+  
 }
 
-/* Contenedor de mini tarjetas */
-.small-cards {
-  display: grid;                 /* usamos grid para mejor control */
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
+/* Contenedor de las dos mini tarjetas debajo de la primera */
+.feature-card-container-small {
+  display: flex;
+  justify-content: center; /* centra las tarjetas */
+  gap: 20px;               /* espacio entre ellas */
   width: 100%;
   max-width: 1100px;
+  margin-top: 20px;
 }
 
-/* Mini tarjetas */
+/* Mini tarjetas individuales */
 .small-cards .mini-card {
+  flex: 0 1 48%;           /* dos tarjetas juntas ocupan casi todo el ancho */
   display: flex;
   flex-direction: column; 
   align-items: center;
   justify-content: center;
-  padding: 1.5rem;
+  padding: 20px;
   border-radius: 8px;
   text-align: center;
 }
 
+/* Colores de las mini tarjetas */
 .small-cards .mini-card.dark {
   background-color: #333;
   color: #fff;
@@ -455,13 +466,13 @@ width: 100%;          /* ocupa todo el ancho disponible */
   color: #333;
 }
 
+/* Imagen dentro de las mini tarjetas */
 .small-cards .mini-card img.round-corner-image {
   width: 100px;
   height: auto;
   border-radius: 8px;
-  margin-bottom: 0.75rem;
+  margin-bottom: 12px;
 }
-
 
 /* ML SECTION */
 .ml-section {
@@ -641,7 +652,7 @@ width: 100%;          /* ocupa todo el ancho disponible */
   max-width: 1100px;       /* ancho máximo igual que antes */
   margin: 0 auto;           /* centra horizontalmente */
   display: flex;
-  flex-direction: row;      /* texto izquierda, imagen derecha */
+  flex-direction: row-reverse;      /* texto izquierda, imagen derecha */
   align-items: center;
   justify-content: space-between;
   height: 400px;            /* altura fija */
@@ -719,15 +730,16 @@ width: 100%;          /* ocupa todo el ancho disponible */
 }
 
 .effects-section .section-title {
-  font-size: 2.25rem;
+  color: #000;
+  font-size: 60px;
   font-weight: 700;
   margin-bottom: 1rem;
 }
 
 .effects-section .section-intro {
   color: #555;
-  font-size: 1.125rem;
-  margin-bottom: 2rem;
+  font-size: 20px;
+  margin-bottom: 50px;
 }
 
 .effects-section .effects-screenshot {
@@ -801,49 +813,57 @@ width: 100%;          /* ocupa todo el ancho disponible */
 /* ADVANCED-SECTION */
 .advanced-section {
   padding: 4rem 0;
-  color: #333;
+  background-color: #f0f0f0;
 }
 .advanced-section .text-center {
   text-align: center;
   margin-bottom: 2rem;
 }
 .advanced-section .section-title {
-  font-size: 2.25rem;
+  font-size: 60px;
+  color: black;
   font-weight: 700;
   margin-bottom: 1rem;
 }
 .advanced-section .section-intro {
   color: #555;
-  font-size: 1.125rem;
-  margin-bottom: 3rem;
+  font-size: 20px;
+  max-width: 680px;
+  margin-top: 23px;
+  margin-right: auto;
+  margin-left: auto;
 }
 .icons-row {
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: 4rem;
   justify-content: center;
 }
 .icon-item {
   text-align: center;
   width: 100px;
+
 }
 .icon-item .icon-img {
-  width: 64px;
+  width: 70px;
   height: auto;
   margin-bottom: 0.75rem;
 }
 .icon-item .icon-label {
   font-size: 0.9rem;
-  color: #555;
+  color: #000000;
+  font-weight: bold;
 }
 .specs-link {
   text-decoration: none;
   color: #007aff;
   font-weight: 500;
+  font-size: 20px;
 }
 .specs-link:hover {
   text-decoration: underline;
 }
+
 /* MAC-SECTION */
 .mac-section {
   padding: 4rem 0;
@@ -852,29 +872,37 @@ width: 100%;          /* ocupa todo el ancho disponible */
 }
 
 .mac-section .section-title {
-  font-size: 2.25rem;
+  font-size: 60px;
   font-weight: 700;
   margin-bottom: 1rem;
+  color: #000000;
 }
 
 .mac-section .section-intro {
   color: #555;
-  font-size: 1.125rem;
-  margin-bottom: 3rem;
+  font-size: 20px;
+  max-width: 680px;
+  margin-top: 23px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
+/* Contenedor de iconos */
 .mac-icons {
   display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: center;
+  flex-wrap: wrap;          
+  justify-content: center;  
+  gap: 2rem;                
+  max-width: 900px;         
+  margin: 0 auto;           
 }
 
+/* Cada icono */
 .mac-icon {
   text-align: center;
-  width: auto;          /* reemplaza el width anterior */
-  max-width: 160px;     /* mantiene el límite de tamaño */
-  flex: 1 1 120px;      /* para que se adapten en diferentes pantallas */
+  width: calc(25% - 2rem);
+  max-width: 160px;
+  box-sizing: border-box;
 }
 
 .mac-icon img {
@@ -884,8 +912,9 @@ width: 100%;          /* ocupa todo el ancho disponible */
 }
 
 .mac-icon p {
-  font-size: 0.9rem;
-  color: #555;
+  font-size: 16px;
+  color: #000000;
+  font-weight: bold;
 }
 
 
@@ -895,15 +924,21 @@ width: 100%;          /* ocupa todo el ancho disponible */
   background-color: black;
 }
 .mac-header h2 {
-  font-size: 2rem;
+  font-size: 60px;
   font-weight: 600;
-  margin-bottom: 1rem;
+  max-width: 680px;
+  margin-top: 23px;
+  margin-right: auto;
+  margin-left: auto;
   color: #ffffff;
 }
 .mac-header p {
-  color: #ffffff;
-  font-size: 1rem;
-  margin-bottom: 2rem;
+  color: white;
+  font-size: 20px;
+  max-width: 680px;
+  margin-top: 23px;
+  margin-right: auto;
+  margin-left: auto;
 }
 .mac-grid {
   display: flex;
