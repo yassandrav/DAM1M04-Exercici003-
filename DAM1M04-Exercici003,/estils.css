@@ -392,87 +392,142 @@ width: 100%;          /* ocupa todo el ancho disponible */
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* sombra suave */
   border-radius: 8px; /* opcional: bordes redondeados */
 }
+
+/* === CONTENEDOR GENERAL === */
 .features-row {
   display: flex;
-  flex-direction: column; /* Tarjeta grande arriba, mini tarjetas debajo */
-  gap: 2rem;
+  flex-direction: column;   /* grande arriba, minis debajo */
   align-items: center;
   width: 100%;
+  padding: 40px 20px;
+  box-sizing: border-box;
+  gap: 40px;
+  /* 👇 sin color de fondo, solo espacio */
+  background: none;
 }
 
-/* Contenedor de la primera tarjeta horizontal */
-.feature-card-container-large {
-  display: flex;
-  justify-content: center;  /* centra la tarjeta horizontal */
-  margin-bottom: 20px;
-}
-
-/* Primera tarjeta horizontal */
 .feature-card--large {
   display: flex;
-  flex-direction: row;      /* texto a la izquierda, imagen a la derecha */
-  align-items: center;
-  border: 1px solid #eee;
-  border-radius: 8px;
-  gap: 20px;
-  width: 100%;
-  max-width: 1100px;
-  background: #f0f0f0;
+  justify-content: space-between;
+  align-items: stretch;   /* 👈 estira las columnas en lugar de centrarlas */
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+  min-height: 350px;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #f5f5f5;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
 }
 
+/* Columna de texto */
 .feature-card--large .text {
   flex: 1;
-  text-align: left;
-}
-
-.feature-card--large img {
-  width: 300px;
-  height: auto;
-  flex-shrink: 0;
-  border-radius: 8px;
-  
-}
-
-/* Contenedor de las dos mini tarjetas debajo de la primera */
-.feature-card-container-small {
+  padding: 2rem;
   display: flex;
-  justify-content: center; /* centra las tarjetas */
-  gap: 20px;               /* espacio entre ellas */
+  padding-top: 70px;
+  flex-direction: column;
+  align-items: flex-start;   /* 👈 alinea a la izquierda */
+  justify-content: flex-start; /* 👈 coloca el contenido arriba */
+  text-align: left;    
+  font-size: 20px;
+  color: #2f434a;
+}
+
+/* Imagen a la derecha */
+.feature-card--large img {
+  width: 400px;          /* 👈 controlas el tamaño fijo */
+  height: 100%;          /* 👈 ocupa toda la altura de la tarjeta */
+  object-fit: cover;     /* 👈 rellena sin dejar márgenes */
+  border-radius: 0 12px 12px 0;
+  padding-top: 70px;
+}
+
+/* === MINI TARJETAS CONTENEDOR === */
+.small-cards {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
   width: 100%;
   max-width: 1100px;
-  margin-top: 20px;
+  padding-top: 30px;
 }
 
-/* Mini tarjetas individuales */
+/* === MINI TARJETA BASE === */
 .small-cards .mini-card {
-  flex: 0 1 48%;           /* dos tarjetas juntas ocupan casi todo el ancho */
+  flex: 1;
+  border-radius: 12px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  width: auto;
+  height: 500px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+/* === Variante 1: imagen de fondo + texto superpuesto === */
+.small-cards .mini-card.bg-image {
   display: flex;
-  flex-direction: column; 
   align-items: center;
   justify-content: center;
-  padding: 20px;
-  border-radius: 8px;
-  text-align: center;
+  color: #c9c9c9;
+  background-color: #2f434a; 
+  background-image: url("./imatges/img_design-guides.jpg"); 
+  background-size: contain;      
+  background-repeat: no-repeat;
+  background-origin: content-box;
+  background-position: left top; 
+  padding-top: 50px;            
+  padding-left: 70px;  
 }
 
-/* Colores de las mini tarjetas */
-.small-cards .mini-card.dark {
-  background-color: #333;
-  color: #fff;
+.small-cards .mini-card.bg-image .card-text {
+  font-weight: 600;
+  text-align: left;
+  font-size: 17px;
+  padding-right: 100px;
 }
 
-.small-cards .mini-card.light {
-  background-color: #f5f5f5;
+/* === Variante 2: imagen normal con tamaño controlado === */
+.small-cards .mini-card.normal {
+  display: flex;
+  flex-direction: column;   /* imagen arriba, texto debajo */
+  align-items: flex-start;  /* 👈 alinea todo a la izquierda */
+  justify-content: flex-start;
+  background: #f5f5f5;
   color: #333;
+  padding: 1rem;
+  padding-top: 50px;            
+  padding-left: 70px; 
 }
 
-/* Imagen dentro de las mini tarjetas */
-.small-cards .mini-card img.round-corner-image {
-  width: 100px;
+/* Imagen más grande arriba */
+.small-cards .mini-card.normal img.round-corner-image {
+  width: 50%;        /* 👈 controla el tamaño */
   height: auto;
   border-radius: 8px;
-  margin-bottom: 12px;
+  margin-bottom: 1rem; /* espacio entre imagen y texto */
 }
+
+/* Título alineado a la izquierda */
+.small-cards .mini-card.normal h4 {
+  text-align: left;
+  margin-bottom: 0.5rem;
+  color: #2f434a;
+  font-size: 20px;
+
+}
+
+/* Párrafo alineado a la izquierda */
+.small-cards .mini-card.normal .mini-card-text {
+  font-size: 17px;
+  font-weight: 400;
+  text-align: left;   /* 👈 asegura alineación izquierda */
+  line-height: 1.5;
+  padding-right: 100px;
+  color: #2f434a;
+}
+
 
 /* ML SECTION */
 .ml-section {
@@ -718,97 +773,93 @@ width: 100%;          /* ocupa todo el ancho disponible */
   font-size: 1rem;
 }
 
-/* EFFECTS SECTION */
+/* EFFECTS SECTIONS */
 .effects-section {
-  padding: 4rem 0;
-  background-color: #f0f0f0;
+  width: 90%;
+  max-width: 1200px;
+  margin: 3rem auto;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #f5f5f5;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
 }
 
+/* Título e intro centrados arriba */
 .effects-section .text-center {
   text-align: center;
-  margin-bottom: 2rem;
+  padding: 2rem;
 }
 
 .effects-section .section-title {
-  color: #000;
-  font-size: 60px;
-  font-weight: 700;
+  font-size: 2rem;
   margin-bottom: 1rem;
 }
 
 .effects-section .section-intro {
-  color: #555;
-  font-size: 20px;
-  margin-bottom: 50px;
+  font-size: 1rem;
+  color: #444;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-.effects-section .effects-screenshot {
-  width: 100%;
-  height: auto;
-  margin-bottom: 2rem;
-}
-
-
+/* Contenedor principal con imagen + tarjetas */
 .effects-row {
   display: flex;
-  align-items: flex-start;
   gap: 2rem;
+  padding: 2rem;
 }
 
-.effects-row .effects-media {
-    flex: 1;
-  max-width: 50%;
-  height: 400px;       /* altura fija de la imagen */
-  overflow: hidden;    /* corta lo que sobra */
+/* Imagen a la izquierda */
+.effects-screenshot {
+  display: none; /* 👈 ocultamos la imagen suelta de arriba */
 }
 
-.effects-row .effects-media img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;       /* llena el contenedor sin deformar */
-  object-position: left;   /* muestra la mitad izquierda */
-  display: block;
+.effects-media {
+  flex: 1; /* ocupa la mitad izquierda */
+  background: url("imatges/img_effects@2x.png") center/cover no-repeat;
+  border-radius: 8px;
+  min-height: 400px;
 }
 
-.effects-row .effects-cards {
+/* Tarjetas a la derecha */
+.effects-cards {
+  flex: 1; /* ocupa la mitad derecha */
   display: flex;
-  flex-direction: column; /* siempre en columna */
+  flex-direction: column;
   gap: 1.5rem;
-  flex: 1;
 }
 
-/* Estilos de las tarjetas */
-.card.card--white {
-  padding: 2rem;
+.effects-cards .card {
+  background: white;
   border-radius: 8px;
-  color: #333;
+  padding: 1.5rem;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  text-align: left;
 }
 
-.card.card--pink {
-  padding: 2rem;
-  border-radius: 8px;
-  color: #ffffff;
-}
-.card.card--white {
-  background-color: #fff;
-  border: 1px solid #eee;
+.effects-cards .card--pink {
+  background: #ffe6f0;
 }
 
-.card.card--pink {
-  background-color: #fcabce;
-  border: 1px solid #ffe2f0;
-}
-
-.card.card--pink h4 {
+.effects-cards h3,
+.effects-cards h4 {
   margin-top: 0;
+  margin-bottom: 0.75rem;
 }
 
-.card img {
-  width: 100%;
-  height: auto;
+.effects-cards p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+.mini-preview {
   margin-top: 1rem;
 }
 
+.mini-preview img {
+  max-width: 100%;
+  border-radius: 6px;
+}
 
 /* ADVANCED-SECTION */
 .advanced-section {
