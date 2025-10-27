@@ -774,91 +774,77 @@ width: 100%;          /* ocupa todo el ancho disponible */
 }
 
 /* EFFECTS SECTIONS */
-.effects-section {
-  width: 90%;
-  max-width: 1200px;
-  margin: 3rem auto;
-  border-radius: 12px;
-  overflow: hidden;
-  background: #f5f5f5;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+.effects-section { 
+  width: 100%; /* 👈 ocupa todo el ancho de la pantalla */ 
+  max-width: none; /* 👈 sin límite */ 
+  margin: 0; /* 👈 sin márgenes laterales */ 
+  border-radius: 0; /* opcional: sin esquinas redondeadas */ 
+  background: #f0f0f0; 
+} 
+  
+.effects-section .text-center { 
+  text-align: center; 
+  padding: 2rem; 
+} 
+  
+.effects-section .section-title { 
+  font-size: 2rem; 
+  margin-bottom: 1rem; 
+} 
+.effects-section .section-intro { 
+  font-size: 1rem; 
+  color: #444; 
+  max-width: 800px; 
+  margin: 0 auto; 
+} 
+/* Contenedor principal con imagen + tarjetas */ 
+.effects-row { display: flex; 
+  width: 100%; /* 👈 ocupa todo el ancho */ 
+  max-width: none; /* 👈 sin límite */ 
+  margin: 0; /* 👈 sin centrado */ 
+  padding: 0; 
 }
-
-/* Título e intro centrados arriba */
-.effects-section .text-center {
-  text-align: center;
-  padding: 2rem;
-}
-
-.effects-section .section-title {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-.effects-section .section-intro {
-  font-size: 1rem;
-  color: #444;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-/* Contenedor principal con imagen + tarjetas */
-.effects-row {
-  display: flex;
-  gap: 2rem;
-  padding: 2rem;
-}
-
-/* Imagen a la izquierda */
-.effects-screenshot {
-  display: none; /* 👈 ocultamos la imagen suelta de arriba */
-}
-
-.effects-media {
-  flex: 1; /* ocupa la mitad izquierda */
-  background: url("imatges/img_effects@2x.png") center/cover no-repeat;
-  border-radius: 8px;
-  min-height: 400px;
-}
-
-/* Tarjetas a la derecha */
-.effects-cards {
-  flex: 1; /* ocupa la mitad derecha */
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
+ /* Imagen a la izquierda */ 
+.effects-screenshot { 
+  display: none; /* 👈 ocultamos la imagen suelta de arriba */ 
+} .effects-media { 
+  flex: 2; /* ocupa la mitad izquierda */ 
+  background: url("imatges/img_effects@2x.png") center/cover no-repeat; 
+  border-radius: 8px; min-height: 400px; 
+} 
+/* Tarjetas a la derecha */ 
+.effects-cards { flex: 1; /* ocupa la mitad derecha */ 
+  display: flex; 
+  flex-direction: column; 
+  gap: 1.5rem; 
+} 
 
 .effects-cards .card {
-  background: white;
-  border-radius: 8px;
-  padding: 1.5rem;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-  text-align: left;
-}
+  background: white; 
+  border-radius: 8px; 
+  padding: 1.5rem; 
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05); 
+  text-align: left; 
+} 
+.effects-cards .card--pink { 
+  background: #ffe6f0; 
+} 
 
-.effects-cards .card--pink {
-  background: #ffe6f0;
+.effects-cards h3, .effects-cards h4 { 
+  margin-top: 0; 
+  margin-bottom: 0.75rem; 
 }
+.effects-cards p { 
+  margin: 0; 
+  line-height: 1.5; 
+} 
 
-.effects-cards h3,
-.effects-cards h4 {
-  margin-top: 0;
-  margin-bottom: 0.75rem;
-}
-
-.effects-cards p {
-  margin: 0;
-  line-height: 1.5;
-}
-
-.mini-preview {
-  margin-top: 1rem;
-}
-
-.mini-preview img {
-  max-width: 100%;
-  border-radius: 6px;
+.mini-preview { 
+  margin-top: 1rem; 
+} 
+.mini-preview img { 
+  max-width: 100%; 
+  border-radius: 6px; 
 }
 
 /* ADVANCED-SECTION */
