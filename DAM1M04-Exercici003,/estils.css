@@ -15,7 +15,7 @@ body {
   background-color: #fff;
 }
 
-/* Contenedores */
+/* Contenedor principal */
 .container {
   width: 90%;
   max-width: 1200px;
@@ -25,57 +25,118 @@ body {
 /* HEADER */
 header {
   width: 100%;
+  background-color: #fff;
+ 
 }
+
+/* Parte superior del header */
 .header-top {
   background-color: #fff;
-  border-bottom: 1px solid #eee;
 }
 .header-top-inner {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1rem 0;
+  justify-content: center;
+  padding: 16px;
 }
-.header-top .logo {
-  font-size: 1.25rem;
-  font-weight: bold;
-  text-decoration: none;
-  color: #000;
-}
+
+/* Navegación principal */
+
 .nav-main ul {
   list-style: none;
   display: flex;
-  gap: 1.5rem;
+  justify-content: center;  /* Centra todo el grupo */
+  margin: 0;
+  padding: 0;
+  width: 100%;
 }
+
+.nav-main ul li {
+  width: 300px;             /* Ancho fijo para cada elemento */
+  text-align: center;
+}
+
 .nav-main ul li a {
+  display: block;          
   text-decoration: none;
   color: #333;
   font-weight: 500;
+  font-size: 18px;
+  padding: 0.5rem 0;     
 }
+
 .nav-main ul li a:hover {
   color: #000;
 }
+
+/* Parte inferior del header */
 .header-bottom {
-  background-color: #f9f9f9;
+  background-color: #fff;
+  position: sticky;  /* 🔹 hacer sticky aquí */
+  top: 0;            /* se pega al top */
+  z-index: 1000;     /* encima del contenido */
+  background-color: #fff;
 }
 .header-bottom-inner {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
   padding: 0.75rem 0;
+  border-top: 1px solid #e0e0e0;
 }
-.nav-secondary ul {
-  list-style: none;
+
+/* Navegación secundaria */
+.nav-secondary {
+  display: flex;               /* fila horizontal */
+  align-items: center;
+  justify-content: space-between; /* logo a la izquierda, enlaces a la derecha */
+  padding: 10px 0;
+  width: 100%; 
+}
+
+.logo-secondary {
   display: flex;
-  gap: 2rem;
+  align-items: center;
+  font-size: 22px;
+  font-weight: 600;
+  color: #000;
+  gap: 8px;
 }
-.nav-secondary ul li a {
+
+.logo-secondary .logo-img {
+  width: 50px;
+  height: auto;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
   text-decoration: none;
-  color: #666;
+  color: #333;
   font-size: 0.95rem;
 }
-.nav-secondary ul li a:hover {
-  color: #333;
+
+.nav-links li a:hover {
+  color: #000;
 }
+
+.button-buy {
+  background-color: #ff4169;
+  color: #fff !important;
+  padding: 0.4rem 1rem;
+  border-radius: 15px;
+  font-weight: 600;
+}
+
+.button-buy:hover {
+  background-color: #e0264a;
+}
+
 
 /* HERO SECTION */
 .hero {
@@ -103,25 +164,24 @@ header {
 }
 .link {
   display: inline-block;
-  background-color: #fff;       /* fondo blanco */
-  color: #ff4081;               /* texto rosado */
+  background-color: #fff;       
+  color: #ff4081;               
   font-size: 16px;
   font-weight: bold;
   padding: 12px 24px;
-  border: 2px solid #ff4081;    /* borde rosado */
-  border-radius: 8px;
-  text-decoration: none;        /* quita subrayado */
+  border: 2px solid #ff4081;    
+  border-radius: 25px;
+  text-decoration: none;        
   cursor: pointer;
-  transition: all 0.3s ease;
 }
 
 .link:hover {
-  background-color: #ff4081;    /* fondo rosado al pasar el ratón */
-  color: #fff;                  /* texto blanco */
+  background-color: #ff4081;    
+  color: #fff;                  
 }
 
 .link:active {
-  background-color: #e73370;    /* tono más oscuro al hacer clic */
+  background-color: #e73370;   
   border-color: #e73370;
 }
 
