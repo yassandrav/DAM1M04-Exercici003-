@@ -338,32 +338,33 @@ width: 100%;          /* ocupa todo el ancho disponible */
 
 /* FEATURES PHOTO-EDITING SECTION */
 .features.photo-editing {
-  padding: 4rem 0;
+  padding: 64px 0;
 }
 
 .features-inner {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centra todo horizontalmente */
-  gap: 3rem;
-  text-align: center; /* Centra el texto */
+  align-items: center;
+  gap: 48px;
+  text-align: center;
 }
 
 .features-inner .media,
 .features-inner .text {
   width: 100%;
   display: flex;
-  justify-content: center; /* Centra imágenes horizontalmente */
-  flex-direction: column; /* Mantiene la columna para texto + imagen */
+  justify-content: center;
+  flex-direction: column; 
   align-items: center;
 }
 
 .features-inner img {
-  width: 200%; /* Ajusta el tamaño dentro del contenedor */
-  max-width: 1300px; /* Limita el ancho máximo */
+  width: 1200px; 
+  max-width: 100%; 
   height: auto;
   display: block;
-  margin: 0 auto; /* Centra la imagen */
+  margin-left: auto;
+  margin-right: auto;
 }
 
 
@@ -458,7 +459,6 @@ width: 100%;          /* ocupa todo el ancho disponible */
   
 }
 
-
 /* HERO FEATURES SECTION */
 .hero-features {
   padding: 4rem 0;
@@ -481,8 +481,8 @@ width: 100%;          /* ocupa todo el ancho disponible */
   width: 100%;
   height: auto;
   margin-bottom: 2rem;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* sombra suave */
-  border-radius: 8px; /* opcional: bordes redondeados */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); 
+  border-radius: 8px; 
 }
 
 /* === CONTENEDOR GENERAL === */
@@ -494,14 +494,13 @@ width: 100%;          /* ocupa todo el ancho disponible */
   padding: 40px 20px;
   box-sizing: border-box;
   gap: 40px;
-  /* 👇 sin color de fondo, solo espacio */
   background: none;
 }
 
 .feature-card--large {
   display: flex;
   justify-content: space-between;
-  align-items: stretch;   /* 👈 estira las columnas en lugar de centrarlas */
+  align-items: stretch;  
   width: 90%;
   max-width: 1000px;
   margin: 0 auto;
@@ -661,19 +660,18 @@ width: 100%;          /* ocupa todo el ancho disponible */
 /* TARJETAS */
 .ml-card {
   background-color: #f0f0f0;
-  padding: 1.5rem;
+  padding: 16px 24px;
   border: 1px solid #eee;
   border-radius: 20px;     
   text-align: center;
   flex: 0 1 calc(33.333% - 2rem); 
-  max-width: 280px;          
+  max-width: 500px;          
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: flex-start; 
   align-items: center;
 }
-
 
 .ml-card img {
   width: auto;
@@ -698,7 +696,7 @@ width: 100%;          /* ocupa todo el ancho disponible */
 }
 .remove-objects-content {
   text-align: center;
-  max-width: 800px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 .remove-objects-content h2 {
@@ -711,11 +709,17 @@ width: 100%;          /* ocupa todo el ancho disponible */
   font-size: 20px;
   margin-bottom: 2rem;
 }
+.remove-objects-image {
+  display: flex;
+  justify-content: center;
+  width: 100%; 
+  max-width: none;
+}
 .remove-objects-image video {
   width: 100%;
   height: auto;
-  max-width: 1200px;
-  border-radius: 8px;
+  max-width: 1000px;
+  border-radius: 20px;
 }
 
 /* TEXT-DESIGN SECTION */
@@ -787,28 +791,30 @@ width: 100%;          /* ocupa todo el ancho disponible */
 /* Contenedor general de tarjetas */
 .text-design-content {
   display: flex;
-  flex-wrap: wrap;            /* permite que las tarjetas bajen de fila */
-  gap: 20%;                    /* espacio entre tarjetas */
-  justify-content: center;    /* centra las filas */
-  margin-top: 2rem;
+  flex-wrap: wrap;  
+  gap: 5%;  
+  justify-content: center;  
+  margin-top: 32px;
+  margin-bottom: 150px;
 }
 
 /* Primera tarjeta: horizontal, ocupa toda la fila pero limitada */
 .text-card.highlight-card:first-child {
   width: 100%;
-  max-width: 1100px;       /* ancho máximo igual que antes */
-  margin: 0 auto;           /* centra horizontalmente */
+  max-width: 1100px; 
+  margin: 0 auto;       
   display: flex;
-  flex-direction: row-reverse;      /* texto izquierda, imagen derecha */
+  flex-direction: row-reverse;     
   align-items: center;
   justify-content: space-between;
-  height: 400px;            /* altura fija */
+  height: 400px; 
   padding: 2rem;
   border-radius: 12px;
   overflow: hidden;
   background-color: #20bf7f;
   color: #fff;
   box-sizing: border-box;
+  margin-bottom: 40px;
 }
 
 /* Texto dentro de la primera tarjeta */
