@@ -1,7 +1,7 @@
 :root {
-  --nav-h: 70px; /* altura de tu nav */
-  --glass-bg: rgba(255, 255, 255, 0.75); /* fondo semi-transparente */
-  --glass-bd: rgba(0,0,0,0.08); /* borde inferior */
+  --nav-h: 70px; 
+  --glass-bg: rgba(255, 255, 255, 0.75); 
+  --glass-bd: rgba(0,0,0,0.08); 
 }
 
 /* Reset básico */
@@ -71,9 +71,9 @@ body {
 }
 /* Parte inferior del header */
 .header-bottom {
-  position: sticky;       /* sticky */
-  top: 0;                 /* se pega al top de la ventana */
-  z-index: 1000;          /* encima del contenido */
+  position: sticky;    
+  top: 0;               
+  z-index: 1000;        
   background-color: var(--glass-bg);
   backdrop-filter: blur(10px) saturate(140%);
   -webkit-backdrop-filter: blur(10px) saturate(140%);
@@ -195,44 +195,44 @@ body {
 
 /* VECTOR-TOOLS SECTION */
 .vector-tools h2 {
-  font-size: 60px; /* tamaño del título principal */
+  font-size: 60px; 
 }
 
 .vector-tools p {
-  font-size: 20px; /* tamaño de los párrafos debajo del título */
+  font-size: 20px; 
 }
 
 .vector-tools {
-  background-color: #000;       /* fondo negro */
-  color: #fff;                  /* texto blanco */
-  padding: 4rem 1rem;           /* espacio arriba/abajo */
-  text-align: center;           /* centra h2 y párrafo */
+  background-color: #000;     
+  color: #fff;           
+  padding: 4rem 1rem;          
+  text-align: center;       
 }
 
 /* Contenedor general: flex-column para centrar todo */
 .vector-tools > .container {
   display: flex;
   flex-direction: column;
-  align-items: center;          /* centra horizontalmente */
+  align-items: center;       
   gap: 2.5rem;
 }
 
 /* Texto principal y subtítulo */
 .vector-tools .vector-text {
-  max-width: 700px;             /* ancho máximo para el texto */
+  max-width: 700px;            
   margin: 0 auto;
 }
 
 /* Imagen central */
 .vector-tools .vector-image {
   width: 100%;
-  max-width: 1280px;           /* ajusta el tamaño máximo de la imagen */
+  max-width: 1280px;     
   display: flex;
   justify-content: center;
   margin: 0 auto;
 }
 .vector-tools .vector-image img {
-  width: 115%;                   /* tamaño relativo*/
+  width: 115%;               
   height: auto;
   border-radius: 8px;
 }
@@ -240,11 +240,11 @@ body {
 /* === CONTENEDOR DE TARJETAS === */
 .vector-tools .vector-cards {
   display: flex;
-  flex-wrap: wrap;           /* permite que la tercera baje */
+  flex-wrap: wrap;           
   justify-content: center;
-  gap: 24px;                 /* separación entre tarjetas */
+  gap: 24px;               
   margin-top: 32px;
-  max-width: 900px;          /* ancho total */
+  max-width: 900px;          
   margin-left: auto;
   margin-right: auto;
 }
@@ -266,31 +266,31 @@ body {
 /* === TARJETAS 1 Y 2 (cuadradas) === */
 .vector-tools .vector-cards .card:nth-child(1),
 .vector-tools .vector-cards .card:nth-child(2) {
-  flex: 1 1 calc(50% - 20px);  /* mitad del ancho */
-  aspect-ratio: 1 / 1;         /* cuadradas */
+  flex: 1 1 calc(50% - 20px); 
+  aspect-ratio: 1 / 1;         
   max-width: 430px;
 }
 
 /* Imagen de la tarjeta 1 */
 .vector-tools .vector-cards .card:nth-child(1) img {
-width: 100%;          /* ocupa todo el ancho disponible */
-  height: auto;         /* mantiene proporción */
-  object-fit: contain;  /* asegura que se vea completa */
+width: 100%;         
+  height: auto;       
+  object-fit: contain;  
 }
 
 /* Imagen de la tarjeta 2 */
 .vector-tools .vector-cards .card:nth-child(2) img {
-  margin-top: auto;   /* empuja la imagen hacia abajo */
+  margin-top: auto;
 
-  width: 100px;       /* tamaño controlado */
+  width: 100px;     
   height: auto;
   
 }
 /* === TARJETA 3 (horizontal) === */
 .vector-tools .vector-cards .card:nth-child(3) {
-  flex: 1 1 100%;              /* ocupa todo el ancho */
+  flex: 1 1 100%;          
   max-width: 900px;
-  flex-direction: row;         /* contenido en fila */
+  flex-direction: row;    
   align-items: center;
   gap: 24px;
   text-align: left;
@@ -299,7 +299,7 @@ width: 100%;          /* ocupa todo el ancho disponible */
 /* Imagen o video dentro de la tercera tarjeta */
 .vector-tools .vector-cards .card:nth-child(3) img,
 .vector-tools .vector-cards .card:nth-child(3) video {
-  width: 40%;                  /* imagen ocupa parte del ancho */
+  width: 40%;                
   height: auto;
   border-radius: 8px;
   object-fit: cover;
@@ -400,17 +400,17 @@ width: 100%;          /* ocupa todo el ancho disponible */
   border: 1px solid #000000;
   border-radius: 8px;
   display: flex;
-  flex-direction: column; /* Imagen arriba, texto debajo */
-  align-items: flex-start; /* Imagen alineada a la izquierda */
-  text-align: left; /* Texto justificado */
-  flex: 0 1 calc(50% - 1rem); /* Dos tarjetas por fila */
+  flex-direction: column; 
+  align-items: flex-start; 
+  text-align: left; 
+  flex: 0 1 calc(50% - 1rem); 
   box-sizing: border-box;
 }
 
 .photo-card img {
   width: 64px; 
   height: auto;
-  margin-bottom: 1rem; /* Espacio entre imagen y texto */
+  margin-bottom: 1rem;
 }
 
 .photo-card h3 {
@@ -418,7 +418,7 @@ width: 100%;          /* ocupa todo el ancho disponible */
 }
 
 .photo-card p {
-  color: #ccc; /* Texto secundario */
+  color: #ccc; 
   margin-bottom: 1rem;
 }
 
@@ -432,8 +432,8 @@ width: 100%;          /* ocupa todo el ancho disponible */
 }
 
 .photo-link-container {
-  text-align: center;  /* centra horizontalmente */
-  margin-top: 2rem;    /* separa del grid de tarjetas */
+  text-align: center;  
+  margin-top: 2rem;  
 }
 
 .photo-link-container .link2 {
@@ -447,11 +447,11 @@ width: 100%;          /* ocupa todo el ancho disponible */
   padding: 0;
 }
 .circle-plus {
-  width: 24px;              /* tamaño del círculo */
+  width: 24px;         
   height: 24px;
   color: #00aaff;
    border: 2px solid #00aaff;
-  border-radius: 50%;        /* hace el círculo */
+  border-radius: 50%;       
   display: flex;
   justify-content: center;
   align-items: center;
@@ -488,7 +488,7 @@ width: 100%;          /* ocupa todo el ancho disponible */
 /* === CONTENEDOR GENERAL === */
 .features-row {
   display: flex;
-  flex-direction: column;   /* grande arriba, minis debajo */
+  flex-direction: column;  
   align-items: center;
   width: 100%;
   padding: 40px 20px;
@@ -518,8 +518,8 @@ width: 100%;          /* ocupa todo el ancho disponible */
   display: flex;
   padding-top: 70px;
   flex-direction: column;
-  align-items: flex-start;   /* 👈 alinea a la izquierda */
-  justify-content: flex-start; /* 👈 coloca el contenido arriba */
+  align-items: flex-start;  
+  justify-content: flex-start; 
   text-align: left;    
   font-size: 20px;
   color: #2f434a;
@@ -730,9 +730,9 @@ width: 100%;          /* ocupa todo el ancho disponible */
 
 /* CONTENEDOR DE IMAGEN PRINCIPAL Y TÍTULO */
 .text-design-header {
-  position: relative;       /* contenedor relativo para el título */
+  position: relative;
   width: 100%;
-  height: 100vh;            /* ocupa toda la pantalla */
+  height: 100vh;
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -746,23 +746,35 @@ width: 100%;          /* ocupa todo el ancho disponible */
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;        /* cubre toda la pantalla */
+  object-fit: cover; 
   z-index: 1;
-  border-radius: 0;         /* opcional, sin bordes redondeados */
+  border-radius: 0;
 }
 
 .text-design-header h2 {
   position: absolute;
-  top: 26%; /* antes era 50%, ahora sube el texto */
-  left: 50%;
-  transform: translateX(-50%); /* solo centrado horizontal, ya no vertical */
-  color: #000000;
+  top: 26%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  text-align: center;
+  color: #000;
   font-size: 60px;
   font-weight: 700;
-  text-align: center;
   z-index: 2;
-  margin: 0;
   padding: 0 1rem;
+}
+.text-design-header p {
+  position: absolute;
+  top: 80%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  text-align: center;
+  color: #555;
+  font-size: 25px;
+  max-width: 700px; 
+  z-index: 2;
 }
 
 
@@ -772,11 +784,11 @@ width: 100%;          /* ocupa todo el ancho disponible */
   text-align: center;
 }
 
-/* TÍTULO Y PÁRRAFO */
 .text-design-header h2 {
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 1rem;
+  justify-content: left;
 }
 .text-design-header h2 span {
   color: #007aff;
@@ -809,7 +821,7 @@ width: 100%;          /* ocupa todo el ancho disponible */
   justify-content: space-between;
   height: 400px; 
   padding: 2rem;
-  border-radius: 12px;
+  border-radius: 20px;
   overflow: hidden;
   background-color: #20bf7f;
   color: #fff;
@@ -820,6 +832,7 @@ width: 100%;          /* ocupa todo el ancho disponible */
 /* Texto dentro de la primera tarjeta */
 .text-card.highlight-card:first-child p {
   color: #fff;
+  text-align: left;
 }
 
 /* Imagen dentro de la primera tarjeta */
@@ -833,8 +846,8 @@ width: 100%;          /* ocupa todo el ancho disponible */
 /* Tarjetas 2 y 3: tamaño fijo, lado a lado debajo de la primera */
 .text-card:nth-child(2),
 .text-card:nth-child(3) {
-  width: 500px;               /* ancho fijo */
-  height: 350px;              /* altura fija */
+  width: 500px;               
+  height: 350px;    
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -847,7 +860,7 @@ width: 100%;          /* ocupa todo el ancho disponible */
 
 /* Fila de mini tarjetas (2 y 3) */
 .text-design-content .text-card:nth-child(2) {
-  margin-right: 2rem;         /* espacio entre ellas */
+  margin-right: 2rem;
 }
 
 /* Imagen o video dentro de tarjetas 2 y 3 */
@@ -865,6 +878,7 @@ width: 100%;          /* ocupa todo el ancho disponible */
 .text-card h3 {
   font-size: 1.125rem;
   margin-bottom: 0.75rem;
+  text-align: left;
 }
 .text-card p {
   color: #555;
@@ -873,10 +887,10 @@ width: 100%;          /* ocupa todo el ancho disponible */
 
 /* EFFECTS SECTIONS */
 .effects-section { 
-  width: 100%; /* 👈 ocupa todo el ancho de la pantalla */ 
-  max-width: none; /* 👈 sin límite */ 
-  margin: 0; /* 👈 sin márgenes laterales */ 
-  border-radius: 0; /* opcional: sin esquinas redondeadas */ 
+  width: 100%;
+  max-width: none;  
+  margin: 0; 
+  border-radius: 0; 
   background: #f0f0f0; 
 } 
   
@@ -897,21 +911,21 @@ width: 100%;          /* ocupa todo el ancho disponible */
 } 
 /* Contenedor principal con imagen + tarjetas */ 
 .effects-row { display: flex; 
-  width: 100%; /* 👈 ocupa todo el ancho */ 
-  max-width: none; /* 👈 sin límite */ 
-  margin: 0; /* 👈 sin centrado */ 
+  width: 100%;
+  max-width: none; 
+  margin: 0; 
   padding: 0; 
 }
  /* Imagen a la izquierda */ 
 .effects-screenshot { 
-  display: none; /* 👈 ocultamos la imagen suelta de arriba */ 
+  display: none; 
 } .effects-media { 
-  flex: 2; /* ocupa la mitad izquierda */ 
+  flex: 2;  
   background: url("imatges/img_effects@2x.png") center/cover no-repeat; 
   border-radius: 8px; min-height: 400px; 
 } 
 /* Tarjetas a la derecha */ 
-.effects-cards { flex: 1; /* ocupa la mitad derecha */ 
+.effects-cards { flex: 1; 
   display: flex; 
   flex-direction: column; 
   gap: 1.5rem; 
